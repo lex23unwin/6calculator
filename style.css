@@ -1,0 +1,125 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+header {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2em 0;
+}
+
+.calculator-container {
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: gray;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.calculator-screen {
+    padding: 3.5em 1em;
+    background-color: white;
+    position: relative;
+    margin: 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.calculator-screen > div {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 3rem;
+    border: 5px solid pink;
+    width: 340px;
+    text-align: right;
+}
+
+.calculator-body {
+    height: 70%;
+}
+
+.calculator-body-clear-delete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 1em;
+    height: 15%;
+    gap: 1em;
+
+}
+
+.calculator-clear {
+    background-color: #F0A8AB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.calculator-clear:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+ 
+.calculator-delete {
+    background-color: #7c7cf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.calculator-delete:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.calculator-body-numbers-operators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 85%;
+    gap: 1em;
+    padding: 1em;
+}
+
+.calculator-body-numbers-operators > button {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.calculator-body-numbers-operators > button:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    margin: 6em 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
