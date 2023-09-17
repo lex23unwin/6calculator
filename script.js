@@ -11,26 +11,23 @@ let operator;
 let operand2;
 
 decimalButton.addEventListener("click", () => {
-    if (!((operand1.includes(".")) && operand2.includes(".")))
+  if (operator === "") 
+  {
+    if (!operand1.includes(".")) 
     {
-      if (operator === "")
-      {
-          if (!(operand1.includes(".")))
-          {
-            operand1 += "."
-            calculatorScreenContent.textContent += "."; 
-          }
-      }
-      else if (operator !== "")
-      {
-          if (!(operand2.includes(".")))
-          {
-            operand2 += "."
-            calculatorScreenContent.textContent += "."; 
-          }
-      }
+      operand1 += ".";
+      calculatorScreenContent.textContent += ".";
     }
-})
+  } 
+  else if (operator !== "") 
+  {
+    if (!operand2.includes(".")) 
+    {
+      operand2 += ".";
+      calculatorScreenContent.textContent += ".";
+    }
+  }
+});
 
 equalsButton.addEventListener("click", () => {
       if ((operand1 !== "") && (operator !== "") && (operand2 !== ""))
@@ -125,22 +122,26 @@ function divide(op1, op2)
   return op1 / op2;
 }
 
-function operate(op1, operator, op2)
+function operate(op1, operator, op2) 
 {
-  if (operator === "+")
+  if (operator === "+") 
   {
-     return add(op1, op2);
-  }
-  else if (operator === "-")
+    return add(op1, op2);
+  } 
+  else if (operator === "-") 
   {
     return subtract(op1, op2);
-  }
-  else if (operator === "*")
+  } 
+  else if (operator === "*") 
   {
     return multiply(op1, op2);
-  }
-  else 
+  } 
+  else if (operator === "/" && op2 !== 0) 
   {
     return divide(op1, op2);
+  } 
+  else 
+  {
+    return "Error";
   }
 }
